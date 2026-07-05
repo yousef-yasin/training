@@ -1,5 +1,5 @@
-from ingestion.reader import load_documents
-from ingestion.chunker import split_text
+from ingestion.reader import load_documents #to import the load_documents function from the reader module in the ingestion package, 
+from ingestion.chunker import split_text #to import the load_documents function from the reader module in the ingestion package, 
 from retrieval.vector_store import store_chunks
 
 

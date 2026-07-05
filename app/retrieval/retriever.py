@@ -1,5 +1,4 @@
-from retrieval.vector_store import get_chroma_collection, model
-
+from retrieval.vector_store import get_chroma_collection, model #to import the get_chroma_collection function and the model object from the vector_store module
 
 MAX_DISTANCE = 1.2
 

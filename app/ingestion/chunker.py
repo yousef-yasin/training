@@ -16,7 +16,7 @@ def split_text(text: str, chunk_size: int = 700, chunk_overlap: int = 150) -> Li
             overlap_text = current_chunk[-chunk_overlap:] if current_chunk else ""
             current_chunk = overlap_text + paragraph + "\n\n"
 
-    if current_chunk:
+    if current_chunk: #it checks if there is any remaining text in the current chunk after processing all paragraphs.
         chunks.append(current_chunk.strip())
 
     return chunks

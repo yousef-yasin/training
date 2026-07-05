@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from google import genai
+from google import genai #to import the load_dotenv function from the dotenv module,
 
 
 load_dotenv()
@@ -35,7 +35,7 @@ Question:
 Answer:
 """
 
-    response = client.models.generate_content(
+    response = client.models.generate_content( #to generate a response from the Gemini model using the provided prompt. The model is specified as "gemini-2.5-flash", and the contents of the prompt are passed to the model for processing.
         model="gemini-2.5-flash",
         contents=prompt
     )
