@@ -1,4 +1,4 @@
-google-generativeai
+google-genai
 #to connect to Gemini API
 python-dotenv 
 #to load environment variables from .env file(to get the API key)
