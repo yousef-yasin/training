@@ -1,0 +1,16 @@
+google-generativeai
+#to connect to Gemini API
+python-dotenv 
+#to load environment variables from .env file(to get the API key)
+chromadb 
+#to store and retrieve embeddings
+sentence-transformers
+ #to generate embeddings(text to vector)
+pypdf
+ #to read pdf files
+python-docx 
+#to read docx files
+pandas 
+#to manipulate dataframes
+markdown 
+#to convert text to markdown(to read file that end by md)
