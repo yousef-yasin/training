@@ -19,11 +19,12 @@ def retrieve_relevant_chunks(question: str, top_k: int = 3):
 
     documents = results["documents"][0]
     metadatas = results["metadatas"][0]
-    distances = results["distances"][0]
+    distances = results["distances"][0] #to retrieve the distances between the question embedding and the embeddings of the retrieved chunks. 
+
 
     for document, metadata, distance in zip(documents, metadatas, distances):
 
-        if distance <= MAX_DISTANCE:
+        if distance <= MAX_DISTANCE:# to check if the distance is less than or equal to the maximum distance threshold. 
             retrieved_chunks.append({
                 "content": document,
                 "file_name": metadata["file_name"],
