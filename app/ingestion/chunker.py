@@ -1,5 +1,9 @@
 from typing import List #to import the List type from the typing module, which is used for type hinting in Python. 
 
+
+#the second step to make chunk
+
+
 def split_text(text: str, chunk_size: int = 700, chunk_overlap: int = 150) -> List[str]:
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
 

@@ -3,6 +3,9 @@ from pathlib import Path #to handle file paths
 from docx import Document #to read docx files
 from pypdf import PdfReader #to read pdf files
 
+#its first file
+#################################################
+
 
 KNOWLEDGE_BASE_DIR = Path("knowledge_base") #to store the knowledge base files(to be read in this case)
 
@@ -11,9 +14,11 @@ def read_txt_or_md(file_path: Path) -> str: #to read text or markdown files
     return file_path.read_text(encoding="utf-8") #to read the content of the file and return it as a string(utf-8 encoding is used to handle special characters))
 #utf-8 to read arabic characters and other special characters in the text files
 
+
 def read_pdf(file_path: Path) -> str: #to read pdf files
     reader = PdfReader(file_path) #to read the pdf file and extract the text from it
     text = "" #to store the extracted text from the pdf file
+
 
     for page in reader.pages: #to iterate through each page of the pdf file and extract the text from it
         page_text = page.extract_text() #to extract the text from the current page of the pdf file
@@ -31,6 +36,8 @@ def read_docx(file_path: Path) -> str:
         text += paragraph.text + "\n"
 
     return text #to return the extracted text from the docx file as a string, with each paragraph separated by a newline character for formatting
+
+
 
 
 def read_csv(file_path: Path) -> str:
